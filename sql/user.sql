@@ -1,0 +1,5 @@
+CREATE TABLE `demo`.`user`(
+  `id` INT(10) NOT NULL AUTO_INCREMENT,
+  `userName` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`) ) ENGINE=INNODB CHARSET=utf8 COLLATE=utf8_general_ci;

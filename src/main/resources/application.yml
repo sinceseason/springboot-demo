@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://60.205.206.164:3306/sybj?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: sit
+    password: sit123
+    druid:
+      initial-size: 5
+      max-active: 100
+      enable: true
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      filters: "stat, wall"
+      stat-view-servlet:
+        enabled: true
+        reset-enable: true
+        url-pattern: /druid/*
+        login-username: sa
+        login-password: sa
+      web-stat-filter:
+        exclusions: "*.js, *.gif, *.jpg, *.png, *.css, *.ico, /druid/*"
+        enabled: true
+        url-pattern: /druid/*
+
+
