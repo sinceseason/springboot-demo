@@ -13,16 +13,19 @@ public class Result<T> {
     public Result() {
     }
 
-    public static Result error(int errorCode, String msg) {
+    public Result error(T data, int errorCode, String msg) {
         Result result = new Result();
+        result.setData(data);
         result.setStatus(Definition.failed);
         result.setErrorCode(errorCode);
         result.setMsg(msg);
         return result;
     }
 
-    public static Result success() {
+    @SuppressWarnings(value = "unchecked")
+    public Result success(T data) {
         Result result = new Result();
+        result.setData(data);
         result.setStatus(Definition.success);
         result.setErrorCode(Definition.SUCCESS.getErrorCode());
         result.setMsg(Definition.SUCCESS.getMsg());

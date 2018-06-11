@@ -7,6 +7,8 @@ public enum Definition {
     success("SUCCESS"),
     failed("FAILED"),
     SUCCESS(0, "操作成功"),
+    NOUSER(401, "该用户不存在"),
+    PWDERROR(402, "密码错误")
     ;
 
     private Integer errorCode;
