@@ -30,7 +30,7 @@ public class SystemController extends BaseController {
             return result.success(loginUser);
         }
 
-        loginUser = userService.findByUserNameAndPassword(userName, passwordMd5);
+        loginUser = userService.findByUserName(userName);
         if (loginUser == null)
             return result.error(null, Definition.NOUSER.getErrorCode(), Definition.NOUSER.getMsg());
 
