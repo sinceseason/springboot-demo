@@ -38,4 +38,12 @@ public class User extends BaseModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
 }
