@@ -1,0 +1,4 @@
+CREATE TABLE `demo`.`wharf`(
+`id` INT(10) NOT NULL AUTO_INCREMENT,
+`wharf_name` VARCHAR(100) COMMENT '码头名称',
+PRIMARY KEY (`id`) ) ENGINE=INNODB CHARSET=utf8 COLLATE=utf8_general_ci;

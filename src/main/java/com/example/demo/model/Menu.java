@@ -26,6 +26,15 @@ public class Menu extends BaseModel {
     @Column(name = "type")
     private Integer type;
 
+    @Column(name = "menuId")
+    private Integer menuId;
+
+    @Column(name = "router")
+    private String router;
+
+    @Column(name = "icon")
+    private String icon;
+
     @Transient
     private List<Menu> subMenu = new ArrayList<>();
 
@@ -59,5 +68,29 @@ public class Menu extends BaseModel {
 
     public void setSubMenu(List<Menu> subMenu) {
         this.subMenu = subMenu;
+    }
+
+    public Integer getMenuId() {
+        return menuId;
+    }
+
+    public void setMenuId(Integer menuId) {
+        this.menuId = menuId;
+    }
+
+    public String getRouter() {
+        return router;
+    }
+
+    public void setRouter(String router) {
+        this.router = router;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }
